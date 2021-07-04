@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/leftStackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stack left"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/homeStackButton"
+        app:layout_constraintEnd_toStartOf="@+id/homeStackButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homeStackButton" />
+
+    <Button
+        android:id="@+id/homeStackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home Stack"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/rigthStackButton"
+        app:layout_constraintEnd_toStartOf="@+id/rigthStackButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/leftStackButton"
+        app:layout_constraintTop_toTopOf="@+id/rigthStackButton" />
+
+    <Button
+        android:id="@+id/rigthStackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stack right"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeStackButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
